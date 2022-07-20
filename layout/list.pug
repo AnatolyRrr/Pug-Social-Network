@@ -1,0 +1,10 @@
+extends base
+
+mixin user(userData)
+    a.user(href=userData.id + '.html')= userData.name 
+
+block content
+    h3 Пользователи
+
+    each user in users
+        +user(user)
